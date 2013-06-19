@@ -21,9 +21,9 @@ class Controller
 		@return_val = nil
 	end
 
-	def start_loop( first_loop )
+	def start_loop
+		@return_val = nil
 		while @return_val != Constants::SOLUTION_FOUND && @return_val != Constants::NO_REMAINING_SUGGESTIONS
-			@return_val = nil
 			#reset all of the possible_solutions which have assumptions made on them by either the similar_tag KS or the playcount KS
 			#since the accuracy of those assumptions can change whenever a track in removed and a new one added to the pool.
 			@knowledge_sources[2].reset #resets SameTopTags
@@ -42,8 +42,7 @@ class Controller
 			#controller loops through assumptions and assesses state of blackboard solution
 			#if we can find two positive assumptions for a possible_suggestion, we choose it as the solution
 			#the possible_suggestion with the most negative assumptions is removed from the blackboard
-			#if this is the 10th pass of the loop, we break and return the one with the most positive assumptions
-			if solved?( false )
+			if solved?
 				puts "SOLUTION FOUND"
 				@return_val = Constants::SOLUTION_FOUND
 			end
@@ -85,10 +84,7 @@ class Controller
 		res
 	end
 
-	def solved?( first_loop )
-		if first_loop
-			return false
-		end
+	def solved?
 		#loop through blackboard suggestion pool and tally the negative assumptions and positive assumptions
 		positive_affirmations = []
 		negative_affirmations = []
@@ -157,12 +153,15 @@ class Controller
 		end
 	end
 
-	def user_rejects_suggestion( suggestion )
+	def user_rejects_suggestion
 		#when user rejects selection, we:
 		#1. tune the Playcount and SameTopTags, which will be accomplished via the notify operation in the dependant class
 		#2. add the track to the global rejected pool
-		suggestion.notify(  )
-		start_loop
+		#3. resume the loop
+		@current_choice.notify( Constants::SUGGESTION_REJECTED )
+		@blackboard.add_to_reject_pool( @current_choice )
+		@current_choice = nil
+		# start_loop
 	end
 
 end

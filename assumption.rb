@@ -11,7 +11,4 @@ class Assumption
 		@possible_suggestion = possible_suggestion
 	end
 
-	def is_retractable?
-		true
-	end
 end

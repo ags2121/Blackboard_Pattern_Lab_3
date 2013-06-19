@@ -20,7 +20,7 @@ class Main
 
 		response = "poo"
 		while response.downcase != "yes"
-			res = controller.start_loop( true )
+			res = controller.start_loop
 			if res == Constants::SOLUTION_FOUND
 				rec = controller.push_recommendation_to_user
 				puts "\nDo you like \"#{ rec[:track] }\" by #{ rec[:artist] }?"
@@ -28,10 +28,9 @@ class Main
 				response = gets.chomp
 				if response.downcase != "yes"
 					puts "\nOkay. I'll find another recommendation."
-					controller.user_rejects_suggestion( rec )
+					controller.user_rejects_suggestion
 				end
 			end
-
 		end
 
 		puts "\nGreat! Would you like me to make another recommendation?"

@@ -58,8 +58,17 @@ class Playcount < KnowledgeSource
 		 end
 	end
 
-	def notify( msg )
-		if msg ==
+	#if a suggestion was rejected that this KS hypothesized on
+	#we see if the rejected suggestions playcount was less than the ideal, if so we raise the ideal
+	#otherwise we lower the ideal
+	def notify( msg, suggestion )
+		if msg == Constants::SUGGESTION_REJECTED
+			if get_playcount( suggestion ) < @ideal_playcount
+				@ideal_playcount += 10
+			else
+				@ideal_playcount -= 10
+			end
+		end
 	end
 
 end

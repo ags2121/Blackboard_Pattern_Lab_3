@@ -19,6 +19,9 @@ class Dependent
 		@references.count
 	end
 
-	def notify( operation )
+	def notify( msg )
+		@references.each do |reference|
+			reference.notify( msg, self )
+		end
 	end
 end

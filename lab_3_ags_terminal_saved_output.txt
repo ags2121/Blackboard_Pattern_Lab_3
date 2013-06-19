@@ -1,0 +1,157 @@
+Alejandro-Silvas-MacBook-Pro:Lab_Deliverable_3 alejandro$ ruby main.rb
+
+Ask me for a recommendation based on a track of your choosing:
+Artist:
+lady gaga
+Track:
+poker face
+Working.... initializing your recommendation engine.
+pool size in loop pass: 0, 3
+Finished initializing your recommendation engine. Starting main loop.
+begin of while in main
+track with the most tag matches Paparazzi, overlap count: 7
+track with the least tag matches Diamonds, overlap count: 2
+ideal playcount: 11411604
+closest_playcount_track: Lady Gaga, Bad Romance, farthest_playcount_track: Rihanna, Diamonds
+closest track playcount: 11136793, farthest track playcount: 2023630
+pos affirmations array: [1, 0, 1]
+neg affirmations array: [0, 2, 0]
+number of positive affirmations in loop 0: 1
+affirmation succesfully retracted from tag KS
+affirmation succesfully retracted from playcount KS
+pool size in loop pass: 1, 3
+track with the most tag matches Paparazzi, overlap count: 7
+track with the least tag matches Paparazzi, overlap count: 7
+ideal playcount: 11411604
+closest_playcount_track: Lady Gaga, Bad Romance, farthest_playcount_track: Ke$ha, TiK ToK
+closest track playcount: 11136793, farthest track playcount: 7812461
+pos affirmations array: [1, 1, 0]
+neg affirmations array: [1, 0, 1]
+number of positive affirmations in loop 1: 1
+SOLUTION FOUND
+
+Do you like "Bad Romance" by Lady Gaga?
+Check it out: http://www.last.fm/music/Lady+Gaga/_/Bad+Romance
+no
+
+Okay. I'll find another recommendation.
+end of while in main
+begin of while in main
+affirmation succesfully retracted from tag KS
+affirmation succesfully retracted from tag KS
+pool size in loop pass: 2, 3
+track with the most tag matches Paparazzi, overlap count: 7
+track with the least tag matches Born to Die, overlap count: 3
+ideal playcount: 11411624
+closest_playcount_track: Lady Gaga, Paparazzi, farthest_playcount_track: Lana Del Rey, Born to Die
+closest track playcount: 8265886, farthest track playcount: 1334587
+pos affirmations array: [2, 0, 0]
+neg affirmations array: [0, 0, 2]
+number of positive affirmations in loop 2: 2
+SOLUTION FOUND
+
+Do you like "Paparazzi" by Lady Gaga?
+Check it out: http://www.last.fm/music/Lady+Gaga/_/Paparazzi
+no
+
+Okay. I'll find another recommendation.
+end of while in main
+begin of while in main
+pool size in loop pass: 3, 3
+track with the most tag matches Till the World Ends, overlap count: 6
+track with the least tag matches Only Girl (In the World), overlap count: 5
+ideal playcount: 11411634
+closest_playcount_track: Rihanna, Only Girl (In the World), farthest_playcount_track: Ke$ha, Die Young
+closest track playcount: 5110285, farthest track playcount: 1226542
+pos affirmations array: [1, 1, 0]
+neg affirmations array: [0, 1, 1]
+number of positive affirmations in loop 3: 1
+SOLUTION FOUND
+
+Do you like "Till the World Ends" by Britney Spears?
+Check it out: http://www.last.fm/music/Britney+Spears/_/Till+the+World+Ends
+no
+
+Okay. I'll find another recommendation.
+end of while in main
+begin of while in main
+affirmation succesfully retracted from tag KS
+affirmation succesfully retracted from playcount KS
+pool size in loop pass: 4, 3
+track with the most tag matches S&M, overlap count: 7
+track with the least tag matches Starships, overlap count: 4
+ideal playcount: 11411634
+closest_playcount_track: Rihanna, Only Girl (In the World), farthest_playcount_track: Nicki Minaj, Starships
+closest track playcount: 5110285, farthest track playcount: 376519
+pos affirmations array: [1, 1, 0]
+neg affirmations array: [0, 0, 2]
+number of positive affirmations in loop 4: 1
+affirmation succesfully retracted from tag KS
+affirmation succesfully retracted from playcount KS
+pool size in loop pass: 5, 3
+track with the most tag matches S&M, overlap count: 7
+track with the least tag matches Only Girl (In the World), overlap count: 5
+ideal playcount: 11411634
+closest_playcount_track: Rihanna, Only Girl (In the World), farthest_playcount_track: Rihanna, S&M
+closest track playcount: 5110285, farthest track playcount: 4045617
+pos affirmations array: [1, 1, 0]
+neg affirmations array: [1, 1, 0]
+number of positive affirmations in loop 5: 1
+affirmation succesfully retracted from tag KS
+affirmation succesfully retracted from playcount KS
+pool size in loop pass: 6, 3
+track with the most tag matches Only Girl (In the World), overlap count: 5
+track with the least tag matches Only Girl (In the World), overlap count: 5
+ideal playcount: 11411634
+closest_playcount_track: Rihanna, Only Girl (In the World), farthest_playcount_track: Madonna, Hung Up
+closest track playcount: 5110285, farthest track playcount: 3258316
+pos affirmations array: [2, 0, 0]
+neg affirmations array: [1, 0, 1]
+number of positive affirmations in loop 6: 2
+SOLUTION FOUND
+
+Do you like "Only Girl (In the World)" by Rihanna?
+Check it out: http://www.last.fm/music/Rihanna/_/Only+Girl+(In+the+World)
+no
+
+Okay. I'll find another recommendation.
+end of while in main
+begin of while in main
+pool size in loop pass: 7, 3
+track with the most tag matches Toxic, overlap count: 5
+track with the least tag matches Girl Gone Wild, overlap count: 4
+ideal playcount: 11411674
+closest_playcount_track: Britney Spears, Toxic, farthest_playcount_track: Katy Perry, Firework
+closest track playcount: 4109619, farthest track playcount: 329731
+pos affirmations array: [2, 0, 0]
+neg affirmations array: [0, 1, 1]
+number of positive affirmations in loop 7: 2
+SOLUTION FOUND
+
+Do you like "Toxic" by Britney Spears?
+Check it out: http://www.last.fm/music/Britney+Spears/_/Toxic
+no
+
+Okay. I'll find another recommendation.
+end of while in main
+begin of while in main
+affirmation succesfully retracted from tag KS
+pool size in loop pass: 8, 3
+track with the most tag matches Girl Gone Wild, overlap count: 4
+track with the least tag matches Girl Gone Wild, overlap count: 4
+ideal playcount: 11411684
+closest_playcount_track: Katy Perry, Last Friday Night (T.G.I.F.), farthest_playcount_track: Jessie J, Domino
+closest track playcount: 3862278, farthest track playcount: 282260
+pos affirmations array: [1, 1, 0]
+neg affirmations array: [1, 0, 1]
+number of positive affirmations in loop 8: 1
+SOLUTION FOUND
+
+Do you like "Last Friday Night (T.G.I.F.)" by Katy Perry?
+Check it out: http://www.last.fm/music/Katy+Perry/_/Last+Friday+Night+(T.G.I.F.)
+yes
+end of while in main
+
+Great! Would you like me to make another recommendation?
+no
+Alejandro-Silvas-MacBook-Pro:Lab_Deliverable_3 alejandro$

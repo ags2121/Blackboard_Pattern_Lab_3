@@ -47,10 +47,6 @@ class SameTopTags < KnowledgeSource
 		puts "track with the least tag matches #{track_with_least_tag_overlap.get_track}, overlap count: #{overlap_count[index_of_least_tag_overlap]}"
 	end
 
-	def adjust_tag_pool_size( val )
-		@tag_pool_size += val
-	end
-
 	def recompute_seed_track_top_tags
 		@user_lastfm_seed_track_top_tags = @lastfm.track.get_top_tags(:artist=>artist_name, :track=>track_name)[0..@tag_pool_size-1].collect{|t| t["name"]}
 	end
@@ -66,6 +62,13 @@ class SameTopTags < KnowledgeSource
 		 		end
 		 	end
 		 end
+	end
+
+	#if the suggestion was rejected, we simply create a bigger tag pool
+	def notify( msg, suggestion )
+		if msg == Constants::SUGGESTION_REJECTED
+			@tag_pool_size += 1
+		end
 	end
 end
 

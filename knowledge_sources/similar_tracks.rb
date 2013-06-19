@@ -47,6 +47,9 @@ class SimilarTracks < KnowledgeSource
 	def reject_pool_contains_suggestion?( suggestion )
 		res = @blackboard.reject_pool_contains_suggestion_with_traits( suggestion.get_artist, suggestion.get_track )
 	end
+
+	def notify( msg, suggestion )
+	end
 end
 
 ########## FOR TESTING ############
